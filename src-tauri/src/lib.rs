@@ -1,7 +1,11 @@
-// Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
+use dotenv::dotenv;
+use std::env;
+
 #[tauri::command]
 fn greet(name: &str) -> String {
-    println!("lol");
+    let api_key = get_api_key();
+    println!("Clé API : {}", api_key);
+    println!("greet catch");
     format!("Hello, {}! You've been greeted from Rust!", name)
 }
 
@@ -12,4 +16,10 @@ pub fn run() {
         .invoke_handler(tauri::generate_handler![greet])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
+}
+
+pub fn get_api_key() -> String {
+    println!("get_api catch");
+    dotenv().ok(); // Charge le fichier .env
+    env::var("ALPHA_VANTAGE_API_KEY").expect("La clé API n'est pas définie")
 }
