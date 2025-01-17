@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "exchange-dashboard",
+  "productName": "trading-dashboard",
   "version": "0.1.0",
-  "identifier": "com.exchange-dashboard.app",
+  "identifier": "com.trading-dashboard.app",
   "build": {
     "beforeDevCommand": "npm run dev",
     "devUrl": "http://localhost:1420",
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "exchange-dashboard",
+        "title": "trading-dashboard",
         "width": 1000,
         "height": 800
       }

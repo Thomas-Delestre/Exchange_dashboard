@@ -33,9 +33,4 @@ Alternativement, vous pouvez utiliser l'outil create-tauri-app pour créer rapid
 
 Pour utiliser PrimeReact: npm install primereact primeicons
 
-Code couleur:
-#40021F
-#0C0826
-#F2B56B
-#BF532C
-#731F1F
+API et site source: 
